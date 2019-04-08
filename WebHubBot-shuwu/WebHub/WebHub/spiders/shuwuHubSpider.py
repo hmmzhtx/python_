@@ -34,7 +34,7 @@ class Spider(CrawlSpider):
 
     ## 爬取前面2页-查看是否为当天发布   目录文章连接
     def start_requests(self):
-        for num in range(1, 2):
+        for num in range(1, 3):
             yield Request(url='http://www.shuwu.mobi/page/%s' % num, callback=self.parse_ph_info)
 
     def parse_ph_info(self, response):
