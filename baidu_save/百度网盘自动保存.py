@@ -23,7 +23,7 @@ def login(driver, username, password):
     elem_userpas.send_keys(password)
     elem_submit = driver.find_element_by_id("TANGRAM__PSP_4__submit")
     elem_submit.click()
-    time.sleep(10)
+    time.sleep(30)
 
 
 # 将加密分享的文件保存到自己云盘的目录下[AA]
