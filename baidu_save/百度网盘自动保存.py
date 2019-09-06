@@ -31,7 +31,7 @@ def login(driver, username, password):
 def extract(driver, srcurl, srcpwd, txt_value):
     driver.get(srcurl)
     try:
-        getpwd = driver.find_element_by_id("hvyVEbB")
+        getpwd = driver.find_element_by_id("hvje7l")
         getpwd.send_keys(srcpwd)
         getButton = driver.find_element_by_link_text("提取文件")
         getButton.click()
