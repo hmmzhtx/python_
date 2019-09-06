@@ -1,31 +1,86 @@
-[INFO  - 2019-09-05T09:47:45.026Z] GhostDriver - Main - running on port 59475
-[INFO  - 2019-09-05T09:47:45.510Z] Session [366a1e00-cfc2-11e9-9b22-010de138804a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2019-09-05T09:47:45.510Z] Session [366a1e00-cfc2-11e9-9b22-010de138804a] - page.customHeaders:  - {}
-[INFO  - 2019-09-05T09:47:45.510Z] Session [366a1e00-cfc2-11e9-9b22-010de138804a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2019-09-05T09:47:45.510Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 366a1e00-cfc2-11e9-9b22-010de138804a
-[ERROR - 2019-09-05T09:47:46.968Z] Session [366a1e00-cfc2-11e9-9b22-010de138804a] - page.onError - msg: ReferenceError: Can't find variable: global
+[INFO  - 2019-09-06T03:36:09.599Z] GhostDriver - Main - running on port 63125
+[INFO  - 2019-09-06T03:36:10.082Z] Session [77b789c0-d057-11e9-aeee-bb9e83edfb4b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2019-09-06T03:36:10.082Z] Session [77b789c0-d057-11e9-aeee-bb9e83edfb4b] - page.customHeaders:  - {}
+[INFO  - 2019-09-06T03:36:10.082Z] Session [77b789c0-d057-11e9-aeee-bb9e83edfb4b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2019-09-06T03:36:10.082Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 77b789c0-d057-11e9-aeee-bb9e83edfb4b
+[ERROR - 2019-09-06T03:36:12.196Z] Session [77b789c0-d057-11e9-aeee-bb9e83edfb4b] - page.onError - msg: ReferenceError: Can't find variable: global
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2019-09-05T09:47:46.968Z] Session [366a1e00-cfc2-11e9-9b22-010de138804a] - page.onError - stack:
+[ERROR - 2019-09-06T03:36:12.196Z] Session [77b789c0-d057-11e9-aeee-bb9e83edfb4b] - page.onError - stack:
   forEach (https://g.alicdn.com/code/npm/web-rax-framework/0.3.2/dist/framework.web.min.js:2)
   exports (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
-  (anonymous function) (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
-  i (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
-  (anonymous function) (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
-  (anonymous function) (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:3)
-  i (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
-  (anonymous function) (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
-  (anonymous function) (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
-  (anonymous function) (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
+  (anonymous function) (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/[INFO  - 2019-09-06T03:39:10.696Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T03:44:10.697Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T03:49:10.696Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T03:54:10.710Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T03:59:10.715Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:04:10.716Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:09:10.716Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:14:10.747Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:19:10.746Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:24:10.746Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:29:10.748Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:34:10.756Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:39:10.764Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:44:10.774Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:49:10.774Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:54:10.804Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:59:10.807Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:04:10.818Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:09:10.820Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:14:10.824Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:19:10.825Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:24:10.825Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:29:10.867Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:34:10.881Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:39:10.883Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:44:10.883Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+ommon/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
   i (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
   t (https://g.alicdn.com/??mui/feloader/4.0.39/feloader-min.js,mui/kissy/4.0.10/seed-min.js,mui/common/4.0.105/js/mod-config.js,mui/babel-polyfill/6.2.7/index.js,mui/bat/4.0.41/index.js,mui/tes/4.4.24/index.js,mui/custom-event/4.0.3/index.js,mui/common/4.0.105/js/tm.js,mui/common/4.0.105/js/event.js,mui/common/4.0.105/js/tool.js,mui/common/4.0.105/js/plugin.js,mui/common/4.0.105/index.js,tm/shop-m/4.2.58/seed.js,tm/shop-m/4.2.58/app.js,tm/shop-m/4.2.58/page/shop-m.js:2)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2019-09-05T09:47:48.731Z] Session [366a1e00-cfc2-11e9-9b22-010de138804a] - page.onError - msg: Error: 当前浏览器不支持Promise，请在windows对象上挂载Promise对象可参考（http://gitlab.alibaba-inc.com/mtb/lib-es6polyfill/tree/master）中的解决方案
+[ERROR - 2019-09-06T03:36:13.987Z] Session [77b789c0-d057-11e9-aeee-bb9e83edfb4b] - page.onError - msg: Error: 当前浏览器不支持Promise，请在windows对象上挂载Promise对象可参考（http://gitlab.alibaba-inc.com/mtb/lib-es6polyfill/tree/master）中的解决方案
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2019-09-05T09:47:48.731Z] Session [366a1e00-cfc2-11e9-9b22-010de138804a] - page.onError - stack:
+[ERROR - 2019-09-06T03:36:13.988Z] Session [77b789c0-d057-11e9-aeee-bb9e83edfb4b] - page.onError - stack:
   request (https://h5.m.taobao.com/applink/smb-fid-sender.html:2)
   request (https://h5.m.taobao.com/applink/smb-fid-sender.html:2)
 
   phantomjs://platform/console++.js:263 in error
+[INFO  - 2019-09-06T03:38:26.419Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T03:43:26.419Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T03:48:26.430Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T03:53:26.433Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T03:58:26.433Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:03:26.446Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:08:26.460Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:13:26.492Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:18:26.493Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:23:26.493Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:28:26.493Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:33:26.493Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:38:26.493Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:43:26.496Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:48:26.507Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:53:26.538Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T04:58:26.544Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:03:26.544Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:08:26.545Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:13:26.553Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:18:26.561Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:23:26.570Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:28:26.570Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:33:26.615Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:38:26.621Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:43:26.622Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:48:26.622Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:42:48.656Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:47:48.656Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:18:17.708Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:23:17.739Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:28:17.739Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:33:17.739Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:38:17.739Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:43:17.743Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-06T05:48:17.753Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW

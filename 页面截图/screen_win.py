@@ -1,16 +1,20 @@
 #!/usr/local/anaconda3/envs/python27
 # -*-coding:utf-8 -*-
 
+import os
 import datetime
 import pymysql
+from selenium.webdriver.common.keys import Keys
+
 import DouMail
 from selenium import webdriver
 from PIL import Image
 from time import sleep
+import schedule
 
 def fetch_results():
     flag = 1
-    db = pymysql.connect(host='localhost', user='root', passwd='root', db='test', port=3306, charset='utf8')
+    db = pymysql.connect(host='192.168.1.4', user='zsbusiness', passwd='3cF8ST', db='test', port=3306, charset='utf8')
     cursor = db.cursor()
     sql = "SELECT * FROM screen_url WHERE flag = '{flag}'".format(flag=flag)
     cursor.execute(sql)
@@ -19,20 +23,43 @@ def fetch_results():
     return results
 
 
+def del_file(path):
+    ls = os.listdir(path)
+    for i in ls:
+        c_path = os.path.join(path, i)
+        if os.path.isdir(c_path):
+            del_file(c_path)
+        else:
+            os.remove(c_path)
+
+
 def screen_shot(event_id, event_url):
     driver = webdriver.PhantomJS(executable_path='D:/py_tools/phantomjs-2.1.1-windows/bin/phantomjs')
+    # driver = webdriver.PhantomJS(executable_path='/usr/local/bin/phantomjs')
 
-    driver.set_page_load_timeout(5)
+    driver.set_page_load_timeout(15)
     driver.set_window_size('375', '667')
+    # driver.viewportSize = {'width': 600, 'height': 2000}  # 重要这句！
+    # driver.maximize_window()
+    # driver.set_window_size('1920', '1080')
     url = event_url
     driver.get(url)
-    sleep(3)
+    sleep(5)
+
+    nextPageElement1 = driver.find_element_by_xpath("/html/body/div[2]/div/a")
+    nextPageElement1.send_keys(Keys.ENTER)
+
+
+    # if nextPageElement:
+    #     print nextPageElement
+    #     nextPageElement.send_keys(Keys.ENTER)
+
 
     element = driver.find_element_by_id("mp-header")
-    print("获取元素坐标：")
+    # print("获取元素坐标：")
     location = element.location
     print(location)
-    print("获取元素大小：")
+    # print("获取元素大小：")
     size = element.size
     print(size)
 
@@ -42,7 +69,9 @@ def screen_shot(event_id, event_url):
     right = element.location['x'] + element.size['width']
     bottom = element.location['y'] + element.size['height']
 
-    img_path = 'C:/work/event_{}.png'.format(event_id)
+
+    # img_path = 'C:/work/event_{}.png'.format(event_id)
+    img_path = 'C:/work/img/event_{}.png'.format(event_id)
 
     driver.save_screenshot(img_path)
     driver.quit()
@@ -58,17 +87,24 @@ def send_mail(to_list, title, content, cc_list=[], encode='utf-8', is_html=True,
     m.send_mail(to_list, title, content, cc_list, encode, is_html, images)
 
 def sendMail(images):
-    today = datetime.datetime.today()
-    today_str = today.strftime('%Y-%m-%d')
+    today_str = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     title = 'KPI 截图 %s' % today_str
     content = '以下为KPI 截图 %s' % today_str
     send_mail(['huangmingming@zzss.com'], title, content, ['huangmingming@zzss.com'], 'utf-8', True, images)
 
-
-if __name__ == '__main__':
+def exx():
+    del_file(r'C:/work/img')
     images = []
     data = fetch_results()
     for row in data:
         img_path = screen_shot(row[0], row[1])
         images.append(img_path)
     sendMail(images)
+
+
+if __name__ == '__main__':
+    exx()
+    # schedule.every().day.at('10:46').do(exx)
+    # while True:
+    #     schedule.run_pending()
+
