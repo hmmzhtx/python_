@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-import xlrd
+# import xlrd
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import time
