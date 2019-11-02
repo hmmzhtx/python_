@@ -14,7 +14,7 @@ np.set_printoptions(suppress=True)
 
 def import_tmall_u():
     localTestMysql.executeSqlByEngine("delete from  tamll_u;")
-    file = r'C:\Users\huangmingming\Desktop\测试.xlsx'
+    file = r'C:\Users\huangmingming\Desktop\1.xlsx'
     file = unicode(file, "utf8")
     df = pd.read_excel(file, sheet_name=["Sheet1"], usecols=[1, 2, 6, 9, 13])
     cols = ["channelID", "nickname", "proname", "taobaoID", "crtime"]
@@ -24,8 +24,7 @@ def import_tmall_u():
         v['nickname'] = v["nickname"]
         v['proname'] = v["proname"]
         v['taobaoID'] = v["taobaoID"]
-        v['crtime'] = v['crtime'].apply(lambda x: x.strftime('%Y-%m-%d'))
-        # print v
+        v['crtime'] = v['crtime'].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S'))
         localTestMysql.save_DataFrame_PD(v, "tamll_u")
     localTestMysql.executeSqlByEngine("UPDATE tamll_u set ymd = left(crtime,10);")
     localTestMysql.executeSqlByEngine("update tamll_u a set a.channel = (select  b.channel from tmall_config b where b.channelID = a.channelID);")
@@ -35,5 +34,8 @@ def import_tmall_u():
 if __name__ == '__main__':
     localTestMysql = LocalMysqlTest(schema='test')
     import_tmall_u()
-    df = localTestMysql.get_DataFrame_PD("SELECT channel,ymd,proname,count(DISTINCT taobaoID) as 'num' from tamll_u where ymd = '2019-10-31' GROUP BY channel,ymd,proname;")
-    print df
+    last_time = localTestMysql.get_DataFrame_PD("SELECT max(crtime) as 'time' from tamll_u where ymd = '2019-11-02';")
+    print u'统计截至日期：'+ last_time['time'][0]
+    df = localTestMysql.get_DataFrame_PD("SELECT channel,ymd,proname,count(DISTINCT taobaoID) as 'num' from tamll_u where ymd = '2019-11-02' GROUP BY channel,ymd,proname;")
+    for index, row in df.iterrows():
+        print row['channel'] + ',' + row['ymd'] + ',' + row['proname'] + ',' + str(row['num'])

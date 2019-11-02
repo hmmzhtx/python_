@@ -71,7 +71,6 @@ class LocalMysqlTest(object):
             dataFrame = pd.read_sql(sql, connection)
             return dataFrame
 
-
     # 保存df到数据库
     def save_DataFrame_PD(self, pd, table, conn=None):
         conn = conn or self.getConnection()
