@@ -109,10 +109,10 @@ def doWork():
     # # driver.quit()
     driver = webdriver.Chrome()
     #必须进行自身登陆后，在元素中获取 ifram 框架的链接，这样不用再次进行登录操作
-    driver.get( 'http://yqx.finndy.com/login?access_token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDg4OTVhZDE2YzhhYzMzN2FkN2FhZDIiLCJyb2xlIjoibWFpbmFjY291bnQiLCJzZXF1ZW5jZSI6MCwic3RhdHVzIjoxLCJkaXNhYmxlIjpmYWxzZSwiaWF0IjoxNTcyMzI5OTY3LCJleHAiOjE1NzIzODc1Njd9.e7XeueM5qEcSW03pM-LOnnRLKP2vKpZ8HTSWIx60tqg&redirect=%2fsearch')
+    driver.get( 'http://yqx.finndy.com/login?access_token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDg4OTVhZDE2YzhhYzMzN2FkN2FhZDIiLCJyb2xlIjoibWFpbmFjY291bnQiLCJzZXF1ZW5jZSI6MCwic3RhdHVzIjoxLCJkaXNhYmxlIjpmYWxzZSwiaWF0IjoxNTcyNjg0NzA5LCJleHAiOjE1NzI3NDIzMDl9.hMtIyXc6J4AZTuaCRVE3WHjZQFYkPtrSuxF8k80mTkQ&redirect=%2fsearch')
     time.sleep(5)
     # 源文件处理路径
-    filepath = 'C:\\work\\53-1.txt'
+    filepath = 'C:\\work\\98_1.txt'
     num, companyNameList = read_txt(filepath)
     for index in range(len(companyNameList)):
         v_num = num[index]
