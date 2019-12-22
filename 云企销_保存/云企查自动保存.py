@@ -15,7 +15,8 @@ def detect_landline(landline_number):
 # 凡是出现sleep的，都是因为网络等原因加载过慢，需要等一等
 def extract(driver, v_num, v_companyName):
     handles = driver.window_handles
-    driver.switch_to_window(handles[0])
+    driver.switch_to.window(handles[0])
+    # driver.switch_to_window(handles[0])
     try:
         company_input = driver.find_elements_by_tag_name("input")[0]
         company_input.clear()
@@ -25,20 +26,21 @@ def extract(driver, v_num, v_companyName):
         company_input.send_keys(vva)
         getButton = driver.find_element_by_class_name("search-btn")
         getButton.click()
-        time.sleep(3)
+        time.sleep(2)
         try:
             select_company = driver.find_element_by_link_text(v_companyName)
             select_company.click()
-            time.sleep(3)
+            time.sleep(2)
             handles = driver.window_handles
-            driver.switch_to_window(handles[1])
+            driver.switch_to.window(handles[1])
+            # driver.switch_to_window(handles[1])
             falseTrue = driver.find_element_by_xpath('//*[@id="homeMainContent"]/div/div[1]/div/div/div[1]/div/span').text
             resultVa = ''
             if falseTrue == u'您已添加该线索':
                 resultVa = "已经添加"
                 driver.close()
             elif falseTrue == u'请选择联系方式，添加为我的线索':
-                time.sleep(2)
+                time.sleep(1)
                 getEye_txt = driver.find_element_by_xpath('//*[@id="report"]/div[1]/div/div/div/div/div[3]/span').text
                 if getEye_txt ==  u'点击查看':
                     getButton = driver.find_element_by_xpath('//*[@id="report"]/div[1]/div/div/div/div/div[3]')
@@ -49,24 +51,24 @@ def extract(driver, v_num, v_companyName):
                 if no_Txt == '0':
                     resultVa = "无联系方式"
                     driver.close()
-                    time.sleep(3)
+                    time.sleep(1)
                 else:
                     select_txt = driver.find_element_by_xpath('//*[@id="report"]/div[1]/div/div/div[2]/div/div[1]/ul/div/div/div[1]/div/div/div[1]/div[1]/div[2]/div/a').text
                     falgPhone = detect_landline(select_txt)
                     if falgPhone:
                         resultVa = "座机号"
                         driver.close()
-                        time.sleep(3)
+                        time.sleep(1)
                     else:
                         selectdir = driver.find_element_by_xpath('//*[@id="report"]/div[1]/div/div/div[2]/div/div[1]/ul/div/div/div[1]/div/div/div[1]/div[3]/div[3]')
                         selectdir.click()
-                        time.sleep(2)
+                        time.sleep(1)
                         selectdir = driver.find_element_by_xpath('//*[@id="report"]/div[1]/div/div/div[2]/div/div[1]/ul/div/div/div[1]/div/div/div[2]/div[2]')
                         selectdir.click()
-                        time.sleep(3)
+                        time.sleep(2)
                         resultVa = "处理完成"
                         driver.close()
-                        time.sleep(3)
+                        time.sleep(1)
         except NoSuchElementException:
             resultVa = "在第一页无查询到"
     except NoSuchElementException:
@@ -75,7 +77,7 @@ def extract(driver, v_num, v_companyName):
     rrv = v_num + '#' + v_companyName + '#' + resultVa
     print rrv
     # 源文件处理结果路径
-    pathOne = "C:\\work\\2.txt"
+    pathOne = "C:\\work\\"+toPath+".txt"
     uipathOne = unicode(pathOne, "utf8")
     fileOne = open(uipathOne, "a")
     fileOne.write(rrv)
@@ -109,16 +111,21 @@ def doWork():
     # # driver.quit()
     driver = webdriver.Chrome()
     #必须进行自身登陆后，在元素中获取 ifram 框架的链接，这样不用再次进行登录操作
-    driver.get( 'http://yqx.finndy.com/login?access_token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDg4OTVhZDE2YzhhYzMzN2FkN2FhZDIiLCJyb2xlIjoibWFpbmFjY291bnQiLCJzZXF1ZW5jZSI6MCwic3RhdHVzIjoxLCJkaXNhYmxlIjpmYWxzZSwiaWF0IjoxNTcyNjg0NzA5LCJleHAiOjE1NzI3NDIzMDl9.hMtIyXc6J4AZTuaCRVE3WHjZQFYkPtrSuxF8k80mTkQ&redirect=%2fsearch')
+    driver.get( 'http://yqx.finndy.com/login?access_token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDg4OTVhZDE2YzhhYzMzN2FkN2FhZDIiLCJyb2xlIjoibWFpbmFjY291bnQiLCJzZXF1ZW5jZSI6MCwic3RhdHVzIjoxLCJkaXNhYmxlIjpmYWxzZSwiaWF0IjoxNTc2MDI4ODY0LCJleHAiOjE1NzYwODY0NjR9.nYdh1czXMOJ2g9MpZlmL_4M4F7biyGP8Unx4q3hz0h0&redirect=%2fsearch')
     time.sleep(5)
     # 源文件处理路径
-    filepath = 'C:\\work\\98_1.txt'
+    filepath = 'C:\\work\\1.txt'
     num, companyNameList = read_txt(filepath)
     for index in range(len(companyNameList)):
         v_num = num[index]
         v_companyName = companyNameList[index]
-        # time.sleep(3)
-        extract(driver, v_num, v_companyName)
+        time.sleep(2)
+        sum = start_num + index
+        if end_num > sum:
+            print "已经处理的个数：{}".format(sum)
+            extract(driver, v_num, v_companyName)
+        else:
+            break
     driver.quit()
 
 def porxy():
@@ -133,5 +140,7 @@ def porxy():
     driver.quit()
 
 if __name__ == '__main__':
-    # porxy()
+    start_num = 0
+    end_num = 900
+    toPath = '第51届广州美博会会刊低解_1'
     doWork()

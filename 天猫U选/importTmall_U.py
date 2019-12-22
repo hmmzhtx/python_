@@ -34,8 +34,9 @@ def import_tmall_u():
 if __name__ == '__main__':
     localTestMysql = LocalMysqlTest(schema='test')
     import_tmall_u()
-    last_time = localTestMysql.get_DataFrame_PD("SELECT max(crtime) as 'time' from tamll_u where ymd = '2019-11-02';")
+    date = '2019-12-21'
+    last_time = localTestMysql.get_DataFrame_PD("SELECT max(crtime) as 'time' from tamll_u where ymd = '{}';".format(date))
     print u'统计截至日期：'+ last_time['time'][0]
-    df = localTestMysql.get_DataFrame_PD("SELECT channel,ymd,proname,count(DISTINCT taobaoID) as 'num' from tamll_u where ymd = '2019-11-02' GROUP BY channel,ymd,proname;")
+    df = localTestMysql.get_DataFrame_PD("SELECT channel,ymd,proname,count(DISTINCT taobaoID) as 'num' from tamll_u where ymd = '{}' GROUP BY channel,ymd,proname;".format(date))
     for index, row in df.iterrows():
         print row['channel'] + ',' + row['ymd'] + ',' + row['proname'] + ',' + str(row['num'])
